@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import videoReducer from "./Features/videoSlice.js";
+import videoReducer from "../Features/videoSlice.js";
 import pkg from "redux-logger";
 const { createLogger } = pkg;
 

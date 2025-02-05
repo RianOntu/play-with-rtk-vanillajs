@@ -1,5 +1,5 @@
-const { createAsyncThunk, createSlice } = require("@reduxjs/toolkit");
-const { default: fetch } = require("node-fetch");
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import  fetch  from "node-fetch";
 
 const initialState = {
   loading: false,
@@ -7,7 +7,7 @@ const initialState = {
   error: "",
 };
 
-const fetchVideos = createAsyncThunk("video/fetchVideos", async () => {
+export const fetchVideos = createAsyncThunk("video/fetchVideos", async () => {
   const response = await fetch(`http://localhost:9000/videos`);
   const videos = await response.json();
   return videos;
